@@ -11,7 +11,7 @@ require("dotenv").config();
 // app.use(cors());
 app.use(
   cors({
-    origin: [""], // add this if there is a problem
+    origin: ["https://chat-application-gamma-seven.vercel.app/"], // add this if there is a problem
     methods: ["POST", "GET"],
     credentials: true,
   })
@@ -41,7 +41,7 @@ const server = app.listen(process.env.PORT, () => {
 const io = socket(server, {
   // intergrate with the server
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chat-application-gamma-seven.vercel.app/",
     credentials: true,
   },
 });
