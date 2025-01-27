@@ -8,7 +8,7 @@ const app = express();
 const socket = require("socket.io");
 require("dotenv").config();
 
-// app.use(cors());
+app.use(cors());
 app.use(
   cors({
     origin: ["https://chat-application-gamma-seven.vercel.app/"], // add this if there is a problem
